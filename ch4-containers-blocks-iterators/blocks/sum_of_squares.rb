@@ -4,5 +4,5 @@ sum = 0
   # The sum variable here is the same one as declared outside of the each loop
   sum += square
 end
-puts sum
+puts sum # => 30
 # square is not defined here, only within the scope of the each block

@@ -29,12 +29,14 @@ File.open_and_process("../misc/testfile", "r") do |file|
   end
 end
 
+# Pass a block
 File.my_open("../misc/testfile", "r") do |file|
   while line = file.gets
     puts line
   end
 end
 
+# Don't pass a block
 f = File.my_open("../misc/testfile", "r")
 while line = f.gets
   puts "> " + line

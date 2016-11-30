@@ -4,11 +4,11 @@ proc2 = -> arg1, arg2 { puts "In proc2 with #{arg1} and #{arg2}" }
 
 proc3 = -> (arg1, arg2) { puts "In proc3 with #{arg1} and #{arg2}" }
 
-proc1.call "ant"
+proc1.call "ant"        # => In proc1 with ant
 
-proc2.call "bee", "cat"
+proc2.call "bee", "cat" # => In proc2 with bee and cat
 
-proc3.call "dog", "elk"
+proc3.call "dog", "elk" # => In proc3 with dog and elk
 
 # Terse syntax also in favour when passing multiple procs
 def my_if(condition, then_clause, else_clause)

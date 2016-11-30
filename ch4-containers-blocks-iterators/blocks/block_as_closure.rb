@@ -18,6 +18,6 @@ end
 
 power_proc = power_proc_generator
 
-puts power_proc.call
-puts power_proc.call
-puts power_proc.call
+puts power_proc.call # => 2
+puts power_proc.call # => 4
+puts power_proc.call # => 8

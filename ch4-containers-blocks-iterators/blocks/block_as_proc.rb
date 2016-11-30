@@ -12,4 +12,4 @@ eg = ProcExample.new
 
 eg.pass_in_block { |param| puts "The parameter is #{param}" }
 
-eg.use_proc(99)
+eg.use_proc(99) # => The parameter is 99
