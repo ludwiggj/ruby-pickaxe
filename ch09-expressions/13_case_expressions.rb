@@ -53,8 +53,8 @@ def display_line(line)
   end
 end
 
-display_line("Music title=The Air is Green")
-display_line("Music track=23")
+display_line("Music title=The Air is Green") # => Title is The Air is Green
+display_line("Music track=23")               # => Track is 23
 
 # Ruby classes are instances of class Class. The === operator is defined in Class to test whether
 # the argument is an instance of the receiver or one of its superclasses. So (abandoning the

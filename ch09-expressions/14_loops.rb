@@ -26,7 +26,7 @@ puts a # => 98
 # range flip-flop example
 file = File.open("ordinal.txt")
 while line = file.gets
-  puts(line) if line =~ /third/ .. line =~ /fifth/
+  puts(line) if line =~ /third/ .. line =~ /fifth/   # => third, fourth, fifth
 end
 
 puts "\r\n"
@@ -38,7 +38,7 @@ puts "\r\n"
 # Ruby community and may end up being removed from the language.
 file = File.open("ordinal.txt")
 while file.gets
-  print if ~/third/ .. ~/fifth/
+  print if ~/third/ .. ~/fifth/                      # => third, fourth, fifth
 end
 
 puts "\r\n"
@@ -50,15 +50,14 @@ puts "\r\n"
 
 File.foreach("ordinal.txt") do |line|
   if (($. == 1) || line =~ /eig/) .. (($. == 3) || line =~ /nin/)
-    print line
+    print line                                      # => first, second, third, eigth, ninth
   end
 end
 
 puts "\r\n"
-
 # Prints all entries from eight as it doesn't "switch off"
 File.foreach("ordinal.txt") do |line|
-  if (($. == 1) || line =~ /eig/) .. ($. == 3)
+  if (($. == 1) || line =~ /eig/) .. ($. == 3)     # => first, second, third, eigth, ninth, tenth
     print line
   end
 end

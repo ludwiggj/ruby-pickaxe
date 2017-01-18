@@ -1,5 +1,12 @@
 require 'date'
 
+# Regarding use of double-colon operator, see: http://stackoverflow.com/questions/3009477/what-is-rubys-double-colon
+
+# :: Lets you access a constant, module, or class defined inside another class or module. It is used to provide
+# namespaces so that method and class names don't conflict with other classes by different authors.
+# A common use of :: is to access constants defined in modules (as below).
+# The :: operator does not allow you to bypass visibility of methods marked private or protected.
+
 # Chaining
 p [ 3, 1, 7, 0 ].sort.reverse  # => [7, 3, 1, 0]
 

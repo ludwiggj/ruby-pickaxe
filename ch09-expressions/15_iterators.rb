@@ -12,6 +12,6 @@ end
 [1, 1, 2, 3, 5].each {|val| print val, " "} # => 1 1 2 3 5
 
 # Returns each line of a file, iterating over only those lines that end with a d:
-File.open("ordinal.txt").grep(/d$/) do |line| # => second
-  puts line                                   #    third
+File.open("ordinal.txt").grep(/d$/) do |line| # => second, third
+  puts line
 end
