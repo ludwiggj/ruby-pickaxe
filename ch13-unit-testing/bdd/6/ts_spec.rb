@@ -24,11 +24,20 @@ describe "TennisScorer", "basic scoring" do
     expect(ts.score).to eq("15-15")
   end
   
+  it "should be 30-0 if the server wins two points" do
+    2.times do ts.give_point_to(:server) end
+    expect(ts.score).to eq("30-0")
+  end
+  
+  it "should be 40-0 after the server wins three points" do
+    3.times do ts.give_point_to(:server) end
+    expect(ts.score).to eq("40-0")
+  end
+  
   it "should raise an exception if award point to the umpire" do
     expect{ ts.give_point_to(:umpire) }.to raise_error(RuntimeError, /Unknown player umpire/)
   end
 
-  it "should be 40-0 after the server wins three points"
   
   it "should be W-L after the server wins four points"
   

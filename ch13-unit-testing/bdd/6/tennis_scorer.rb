@@ -2,12 +2,14 @@ class TennisScorer
 
   OPPOSITE_SIDE_OF_NET = { :server => :receiver, :receiver => :server }
 
+  SCORES = [0, 15, 30, 40]
+
   def initialize
     @score = { :server => 0, :receiver => 0 }
   end
   
   def score
-    "#{@score[:server]*15}-#{@score[:receiver]*15}"
+    "#{SCORES[@score[:server]]}-#{SCORES[@score[:receiver]]}"
   end
   
   def give_point_to(player)
