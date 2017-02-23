@@ -38,12 +38,15 @@ describe "TennisScorer", "basic scoring" do
     expect{ ts.give_point_to(:umpire) }.to raise_error(RuntimeError, /Unknown player umpire/)
   end
 
+  it "should be Deuce after each wins three points" do
+    3.times do ts.give_point_to(:server) end
+    3.times do ts.give_point_to(:receiver) end
+    expect(ts.score).to eq("Deuce")
+  end
   
   it "should be W-L after the server wins four points"
   
   it "should be L-W after the receiver wins four points"
-  
-  it "should be Deuce after each wins three points"
   
   it "should be A-server after each wins three points and the server gets one more"
 end
